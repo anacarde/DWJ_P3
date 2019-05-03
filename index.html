@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+   		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+		<title> Vélo'v </title>
+		<link rel="shortcut icon" href="./images/logo/Logo_Velov_ico.ico" />
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+   integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+   crossorigin=""/>
+   		<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" crossorigin="" />
+   		<link rel="stylesheet" href="style.css" />
+	</head>
+
+	<body>
+		
+		<header id="menu">
+			<nav id="menu_container">
+				<img src="./images/logo/Logo_Velov.gif" alt="logo_velov" id="logo_velov" />
+				<ul>
+					<li> <a href="#container" class="menu_nav"> Accueil </a> </li>
+					<li> <a href="#rent_bike" class="menu_nav"> Réservation </a> </li>
+				</ul>
+			</nav>
+		</header>
+
+		
+		<section>
+			<div id="container">
+				<div id="slider_button_div">
+					<button id="left_arrow" class="slider_button arrow"> &lt; </button>
+					<img src="./images/slider/pause.png" alt="pause" id="pause" />
+					<button id="right_arrow" class="slider_button arrow"> &gt; </button>
+				</div> 
+				<div id="slider"> 
+					<div id="cadre_1" class="cadre">
+						<h1> Bienvenue sur <span> V</span><span>e</span><span>l</span><span>o</span><span>'</span><span>v</span> !</h1>
+						<em id="em_presentation"> Le site de réservation en ligne des vélos de la ville de Lyon </em>
+						<div id="deco_velo">
+							<img src="./images/presentation/cycle.png" alt="cycle" />
+							<img src="./images/presentation/cycle.png" alt="cycle" />
+							<img src="./images/presentation/cycle.png" alt="cycle" />
+						</div>
+						<p class="accueil_presentation"> Sans plus attendre, nous allons vous expliquer comment effectuer votre réservation en ligne. </p>
+						<div class="pagination"> 1/7 </div>
+					</div>
+					<div id="cadre_2" class="cadre">
+						<p> Ci-dessous, vous trouverez une <strong> carte de Lyon avec des ronds colorés </strong> comprenant des nombres. Les nombres sont le nombre de stations se trouvant dans la zone comprise par le rond coloré. <strong> Cliquez sur un de ces ronds pour vous approcher de la zone. </strong> </p>
+						<img src="./images/presentation/map_zoomout_img.png" alt="map_Lyon" class="image_sample" />
+						<div class="pagination"> 2/7 </div>
+					</div>
+					<div id="cadre_3" class="cadre">
+						<p> Vous allez voir apparaître les <strong> stations velo'v </strong>présentes dans cette zone et <strong> indiquée par des ronds de différentes couleurs. </strong> Nous allons vous expliquer dans le diaporama suivant à quel état de la station correspond chaque couleur. </p>
+						<img src="./images/presentation/map_zoomin_img.png" alt="map_Lyon" class="image_sample" />
+						<div class="pagination"> 3/7 </div>
+					</div>
+					<div id="cadre_4" class="cadre">
+						<div class="icones_sample">
+							<img src="./images/marqueurs/blue_cycle.png" alt="blue_cycle" class="cycle"/>
+							<p class="icon_text"> <strong> Le vélo bleu </strong> indique une station en état de marche ayant des bornes disponibles pour garer son vélo ainsi qu'<strong>au moins 4 vélos </strong> en état de réservation. </p> <p class="small_icon_text"> Station disponible </p> 
+						</div>
+						<div class="icones_sample">
+							<img src="./images/marqueurs/blue_gray_cycle.png" alt="blue_gray_cycle" class="cycle"/>
+							<p class="icon_text"> <strong> Le vélo mi-bleu mi-gris </strong> indique une station en état de marche ayant <strong> entre 1 et 3 vélos </strong> disponibles à la réservation. </p> <p class="small_icon_text"> Station presque vide (entre 1 et 3 vélos) </p>
+						</div>
+						<div class="icones_sample">
+							<img src="./images/marqueurs/blue_marine_cycle.png" alt="blue_marine_cycle" class="cycle" />
+							<p class="icon_text"> <strong> Le vélo bleu foncé </strong> indique une station en état de marche étant <strong> complète </strong>, et donc n'ayant plus de place pour venir y garer un vélo. </p> <p class="small_icon_text"> Station complète </p>
+						</div>
+						<div class="icones_sample">
+							<img src="./images/marqueurs/gray_cycle.png" alt="gray_cycle" class="cycle" />
+							<p class="icon_text"> <strong> Le vélo gris </strong> indique une station en état de marche, mais n'ayant <strong> pas de vélos </strong> disponibles à la réservation. Vous pouvez néanmoins y garer votre vélo. </p> <p class="small_icon_text"> Station vide </p>
+						</div>
+						<div class="icones_sample">
+							<img src="./images/marqueurs/red_cycle.png" alt="red_cycle" class="cycle" />
+							<p class="icon_text"> <strong> Le vélo rouge </strong> indique une station n'étant <strong> pas en état de marche. </strong> Aucune action n'y est possible. </p> <p class="small_icon_text"> Station indisponible </p>
+						</div>
+						<div class="pagination"> 4/7 </div>
+					</div>
+					<div id="cadre_5" class="cadre">
+						<p> <strong> En cliquant </strong> sur un de ces indicateurs de station, vous verrez l'<strong>icône devenir orange. </strong> A droite de la carte s'affiche alors <strong> un panneau vous donnant plus de précisions sur la station. </strong> Vous pouvez appuyer sur le <strong> bouton "réserver" </strong> de ce panneau pour passer à l'étape suivante. </p>
+						<em class="em_explaination"> Les indicateurs rouge et gris n'ayant pas de vélos disponibles n'affichent pas de panneaux. </em>
+						<img src="./images/presentation/station_info_img.png" alt="panneau_info_byke" class="image_sample" />
+						<div class="pagination"> 5/7 </div>
+					</div>
+					<div id="cadre_6" class="cadre">
+						<p> Vous accédez à un <strong> formulaire. </strong> Il vous suffit d'<strong>entrer votre nom, votre prénom et de signer </strong>, comme dans l'exemple. Appuyez ensuite sur le <strong>bouton de validation. </strong> </p>
+						<img src="./images/presentation/form_booking.png" alt="form_booking" class="image_sample" />
+						<div class="pagination"> 6/7 </div>
+					</div>
+					<div id="cadre_7" class="cadre">
+						<p> <strong>L'icône devient verte </strong> et une <strong>barre s'affiche en dessous de la carte </strong> dans laquelle vous pourrez voir les <strong>informations de la réservation</strong> effectuée ainsi que le temps restant. Vous avez <strong>20 minutes</strong> pour prendre votre vélo après l'avoir réservé. </p>
+						<em class="em_explaination"> Vous ne pouvez pas effectuer plusieurs réservations en même temps. Une nouvelle réservation annulera votre réservation précédente. Vous pouvez également annuler manuellement votre réservation en appuyant sur le bouton à droite de la barre </em>
+						<img src="./images/presentation/reservation_made_img.png" alt="reservation_bar" id="long_image_sample" />
+						<p class="accueil_presentation"> C'est tout ! Toute l'équipe Vélo'v vous souhaite une bonne réservation. </p>
+						<div class="pagination"> 7/7 </div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		
+		<div id="bottom_section">
+			<div id="rent_bike">
+				
+				<div id="map_Lyon" class="">
+				</div>
+				
+				<div id="div_info_panel" class="">
+					<div id="pointer_arrow">
+					</div>
+					<div id="info_panel">
+						<div id="erase_info_panel"> X </div>
+						<div id="info_stations">
+							<p class="info_line"> Station : <span id="station_name"></span></p>
+							<p class="info_line"> Adresse : <span id="station_address"></span></p>
+							<p class="info_line"> Bornes : <span id="station_stands"></span></p>
+							<p class="info_line"> Vélos disponibles : <span id="station_bikes"></span></p>
+							<button id="booking"> Réserver </button>
+						</div>
+					</div>
+				</div>
+				
+				<form id="form_booking" class="">
+					<input type="button" value="X" id="close_button" />
+					<div class="form_div">
+						<label class="label" for="input_name">Nom : </label>
+						<input type="text" class="field" id="input_name" required="required" />
+					</div>
+					<div class="form_div">
+						<label class="label" for="input_surname">Prénom : </label>
+						<input type="text" class="field" id="input_surname" required="required" />
+					</div>
+					<div class="form_div">
+						<label class="label">Signature : </label>
+						<canvas id="canvas" width="150" height="75"></canvas>
+						<input type="button" value="effacer" id="erase_canvas" />
+					</div>
+					<div id="ask_confirm" class="">
+						<p> <span class="long_ask"> Une réservation est déjà en cours. Une nouvelle réservation entraînera la perte de votre réservation précédente. Cliquez à nouveau pour confirmer. </span> <span class="short_ask"> Réservation en cours! Appuyez à nouveau sur le bouton validation pour confirmer </span> </p>
+					</div>
+					<div id="button_div">
+						<input type="submit" id="confirm_booking_button" class="form_button" value="validation" />
+					</div>
+				</form>
+			</div>
+			
+			<div id="timer" class="">
+				<div id="timer_working">
+					<p> Vélo réservé à la station <span id="station_name_reserved" class="indications"> </span> , située à : <span id="station_address_reserved" class="indications"> </span> </p>
+					<div id="time_and_cancel">
+						<p> Réservant : <span id="client_name" class="indications"></span> </p> 
+						<p> Temps de réservation restant : <span id="minute_rest" class="indications">20</span>:<span id="second_rest" class="indications">00</span></p>
+						<button id="cancel_reservation_button"> <span class="long_cancel"> Annuler ma réservation </span> <span class="short_cancel"> Annuler </span> </button> 
+					</div>
+				</div>
+				<div id="timer_stop">
+					<p> Fin de délai de réservation. </p>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+		integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+		crossorigin=""></script>
+		<script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js" crossorigin=""> </script>
+		<script src="./class_objets/utils.js"> </script>
+		<script src="./class_objets/config.js"> </script>
+		<script src="./class_objets/station.js"> </script>
+		<script src="./class_objets/reservation.js"> </script>
+		<script src="./class_objets/app.js"> </script>
+	</body>
+</html>
+

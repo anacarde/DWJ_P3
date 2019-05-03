@@ -1,0 +1,1232 @@
+ /* CSS PAGE */
+
+
+
+
+
+html
+{
+  scroll-behavior: smooth;
+  font-family: arial;
+  height: 1400px;
+  width: 90%;
+  
+}
+
+body
+{
+  background-image: url("./images/wallpaper/velib_wallpaper-compressor.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+::-moz-focus-inner {border:0;}
+
+
+
+
+
+/* CSS MENU NAV */
+
+
+
+
+
+#menu
+{
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 350px;
+  z-index: 1000;
+  background-color: #DBD4D4;
+  transform: rotate(45deg) translateY(-80%);
+  border: 2px solid red;
+}
+
+#menu_container
+{
+  transform: rotate(-45deg);
+  margin-bottom: 25px;
+}
+
+#menu_container #logo_velov
+{
+  width: 100px;
+  height: auto;
+}
+
+#menu_container ul
+{
+  padding-left: 0;
+  list-style-type: none;
+  margin: 0;
+}
+
+#menu_container a
+{
+  text-decoration: none;
+  font-size: 1.2em;
+  color: black;
+}
+
+#menu_container a:hover
+{
+  color: red;
+}
+
+
+
+
+  
+/* CSS SLIDER PRESENTATION */
+
+
+
+
+
+   /* Slider extern frame */
+
+
+#container
+{
+  position: relative;
+  width: 900px;
+  height: 600px;
+  border: 5px ridge;
+  overflow: hidden;
+  margin: 20px auto 70px auto;
+}
+
+
+   /* Slider button div */
+
+
+#slider_button_div
+{
+  position: absolute;
+  display: flex;
+  z-index: 100;
+  justify-content: center;
+  width: 200px;
+  left : 50%;
+  transform: translateX(-50%);
+}
+
+.slider_button
+{
+  display: block;
+  border-radius: 50%;
+  font-size: 2em;
+  font-weight: 900;
+  padding: 5px 10px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.slider_button:focus
+{
+  outline: 0;
+}
+
+.arrow
+{
+  background-color: #94c0f7;
+}
+
+.arrow:hover, .active
+{
+  background-color: #3d4cd3;
+}
+
+#pause
+{
+  cursor: pointer;
+}
+
+
+
+   /* Slider interne frame */
+
+
+#slider
+{
+  width: 900px;
+  height: 600px;
+  position: relative;
+  background-color: #fff8ad;
+}
+
+.cadre
+{
+  width: 900px;
+  height: 600px;
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+
+   /* Slider all diapo general styles */
+
+
+.accueil_presentation
+{
+  font-weight: bold;
+  font-size: 1.3em;
+  color: #9e1f1f;
+  text-decoration: underline;
+}
+
+.pagination
+{
+  margin-top: 10px;
+}
+
+.image_sample
+{
+  height: 50%;
+  width: auto;
+  border: 1px solid black;
+}
+
+.cadre > p
+{
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 1.2em;
+}
+
+.cadre em
+{
+  margin: 5px 20px;
+  text-align: center;
+}
+
+.cadre strong
+{
+  background-color: #a9ef47;
+}
+
+
+   /* Slider style diapo 1 */
+
+
+#cadre_1 h1
+{
+  font-size: 3em;
+}
+
+#cadre_1 h1 span:nth-child(1)
+{
+  color: blue;
+}
+
+#cadre_1 h1 span:nth-child(2)
+{
+  color: red;
+}
+
+#cadre_1 h1 span:nth-child(3)
+{
+  color: green;
+}
+
+#cadre_1 h1 span:nth-child(4)
+{
+  color: orange;
+}
+
+#cadre_1 h1 span:nth-child(5)
+{
+  color: rgb(250,220,0);
+}
+
+#cadre_1 h1 span:nth-child(6)
+{
+  color: brown;
+}
+
+#em_presentation
+{
+  font-weight: bold;
+  color:red;
+}
+
+#deco_velo
+{
+  margin : 20px 0px;
+}
+
+#deco_velo img
+{
+  margin-left: 20px;
+  border-radius: 50%;
+}
+
+#deco_velo img:nth-child(1)
+{
+  background-color: red;
+}
+
+#deco_velo img:nth-child(2)
+{
+  background-color: orange;
+}
+#deco_velo img:nth-child(3)
+{
+  background-color: green;
+}
+
+
+   /* Slider style diapo 4 */
+
+.small_icon_text
+{
+  display: none;
+}
+
+
+.icones_sample
+{
+  display: flex; 
+  align-items: center;
+  height: 80px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cycle
+{
+  position: relative;
+  width: 70px;
+  height: auto;
+  margin-right: 10px;
+}
+
+
+.icones_sample p
+{
+  position: relative;
+  width: 90%;
+  font-size: 1.2em;
+}
+
+
+   /* Slider style diapo 7 */
+
+
+
+#long_image_sample
+{
+  width: 95%;
+  border: 1px solid black;
+}
+
+
+
+
+
+/* CSS RESERVATION MAP && DIV */
+
+  /* Global Bottom block */
+
+#bottom_section
+{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+   /* Map block */
+
+#rent_bike
+{
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin-left: 20px;
+}
+
+
+  /* Map */
+
+
+#map_Lyon
+{
+  width: 100%;
+  height: 98vh;
+  margin-top: 1vh;
+  border: 1px solid black;
+}
+
+#map_Lyon.reduct_mode
+{
+  height: 77vh;
+}
+
+
+  /* Info station block */
+
+
+#div_info_panel
+{
+  display: none;
+  align-items: center;
+  margin-left: 10px;
+}
+
+#div_info_panel.open_mode
+{
+  display: flex;
+}
+
+
+
+#pointer_arrow
+{
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 10px 10px;
+  border-color: transparent #57d68a transparent transparent;
+}
+
+#erase_info_panel
+{
+  background-color: white;
+  float: right;
+  opacity: 0.5;
+  margin: 10px;
+  border-radius: 5px;
+  padding: 0 5px;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+#erase_info_panel:hover
+{
+  opacity: 1;  
+}
+
+#erase_info_panel:active
+{
+  opacity: 1;
+}
+
+#info_stations
+{
+  background-color: #57d68a;
+  padding: 30px 10px 20px;
+  border-radius: 10px;
+}
+
+.info_line
+{
+  background-color: white;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+#booking
+{
+  display: block;
+  margin: 0 auto;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#booking:hover
+{
+  background-color: #a5dcf7;
+}
+
+
+   /* reservation form block */
+
+
+#form_booking
+{
+  display: none;
+  position: relative;
+  margin-left: 20px;
+  padding: 20px;
+  background-color: #f9e57c;
+  border: 1px solid black;
+}
+
+#form_booking.open_mode
+{
+  display: block;
+}
+
+#close_button
+{
+  float: right;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  background-color: #d6b673;
+  opacity: 0.5;
+}
+
+#close_button:hover
+{
+  background-color: #d6b673;
+  opacity: 1;
+}
+
+.label
+{
+  display: block;
+  padding : 10px 0px 10px 0px;
+}
+
+
+.field
+{
+  width: 90%;
+  height: 20px;
+  padding: 5px;  
+}
+
+#canvas
+{
+  border: 2px solid gray;
+  opacity: 0.5;
+  background-color: white;
+  cursor: url(./images/canvas/custom_pointer.png), auto;
+}
+
+#canvas.confirm_mode
+{
+  box-shadow: 0 0 5px 3px red;
+}
+
+#erase_canvas
+{
+  display: block;
+  border: none;
+  background-color: white;
+}
+
+#ask_confirm
+{
+  display: none;
+  position: absolute;
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+  bottom: 25%;
+  left: 5px;
+  right: 5px;
+  width: auto;
+}
+
+#ask_confirm::after
+{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+}
+
+#ask_confirm.confirm_mode
+{
+  display: block;
+}
+
+.long_ask
+{
+  display: block;
+}
+
+.short_ask
+{
+  display: none;
+}
+
+#button_div
+{
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.form_button
+{
+ width: 100px;
+ border-radius: 5px;
+ padding: 5px;
+ cursor: pointer;
+}
+
+.form_button:hover
+{
+  font-weight: bold;
+  color: white;
+}
+
+#confirm_booking_button
+{
+  background-color: #94c0f7;
+  margin-right: 3px;
+}
+
+
+
+  /* temporary info frames */
+
+
+
+#reservation_confirmed
+{
+  background-color: #94c0f7;
+  margin-left: 50px;
+}
+
+#reservation_canceled
+{
+  background-color: #ff9b9b;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.info_reservation_status
+{
+  height: 70px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+
+
+
+
+/* CSS TIMER */
+
+
+
+
+
+#timer
+{
+  display: none;
+  position: relative;
+  background-color: #dbd4d4;
+  border: 2px solid black;
+  text-align: center;
+  font-weight: bold;
+}
+
+#timer.open_mode
+{
+  display: block;
+}
+
+#timer_stop
+{
+  display: none;
+}
+
+#timer.end_mode #timer_working
+{
+  display: none;
+}
+
+#timer.end_mode #timer_stop
+{
+  display: block;
+}
+
+.indications
+{
+  color: red;
+}
+
+#time_and_cancel
+{
+  display: flex;
+  justify-content: space-around;
+  align-items: center; 
+}
+
+#cancel_reservation_button
+{
+  background-color: #faff84;
+  color: #605757; 
+  padding: 5px 10px;
+  width: 200px;
+  cursor: pointer;
+}
+
+#cancel_reservation_button:hover
+{
+  font-weight: bold;
+  color: black;
+  background-color: yellow;
+}
+
+.short_cancel
+{
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* MEDIA QUERIES */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width: 992px) {
+
+  /* CSS Page */
+
+  html{
+    width: 100%;
+    height: auto;
+    
+  }
+  
+  body{
+    background-image: none;
+    width: 100%;
+    margin: 0;
+  }
+
+  /* CSS Menu page */
+   
+  #menu
+  { 
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: none;
+    border: none;
+    border-bottom: 2px solid red;
+    
+  }
+
+  #menu_container
+  {
+    transform: none;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0px;
+  }
+
+  #menu_container #logo_velov
+  {
+    width: 100px;
+    height: 50px;
+  }
+
+  #menu_container ul
+  {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 60vw;
+  }
+
+  #menu_container a
+  {
+    font-size: 1.2em; 
+  }
+
+  #menu_container a:hover
+  {
+    color: black;
+  }
+
+  #menu_container a:active
+  {
+    color: red;
+  }
+
+  /* CSS SLIDER */
+
+    /* Slider extern frame */
+
+  #container
+  {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    border: none;
+    margin: 0;
+    background-color: #fff8ad;
+  }
+
+    /* Slider button div */
+
+  #slider_button_div
+  {
+    width: 100%;
+    bottom: 0;
+  }
+
+    /* Slider interne frame */
+
+  #slider
+  {
+    width: inherit;
+    height: inherit;
+  }
+
+  .cadre
+  {
+    box-sizing: border-box;
+    width: inherit;
+    padding-top: 12vh;
+    height: 80vh;
+  }
+
+     /* Slider all diapo general styles */
+  
+  .accueil_presentation
+  {
+    text-decoration: none; 
+    font-size: initial;
+  }
+
+  .cadre > p
+  {
+    font-size: 1.2em; 
+  }
+
+     /* Slider style diapo 1 */
+
+  #cadre_1 h1
+  {
+    font-size: 2em;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  #em_presentation
+  {
+    color: green;
+  }
+  
+  .em_explaination
+  {
+    display: none;
+  }
+
+  #deco_velo
+  {
+    display: flex;
+    justify-content: center;
+  }
+
+  #deco_velo img
+  {
+    width: 100px;
+    height: 100px;
+  }
+  
+     /* Slider style diapo 4 */
+  
+  .icon_text 
+  {
+    display: block;
+  }
+  
+  .small_icon_text
+  {
+    display: none;
+  }
+  
+  .icones_sample
+  {
+    width: 90%;
+    height: 60px;
+  }
+
+  .cycle
+  {
+    width: 50px;
+  }
+
+  .icones_sample p
+  { 
+    font-size: 1.2em;
+  }
+  
+    /* Slider style diapo 7 */
+  
+  #long_image_sample
+  {
+    height: 100px;
+    width: 400px;
+  }
+  
+  /* CSS RESERVATION MAP && DIV */
+
+     /* General block */
+
+  #bottom_section
+  {
+    position: relative; 
+  }
+  
+  #rent_bike
+  {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+
+    /* Map */
+
+  #map_Lyon
+  {
+    height: 100vh;
+    border: none;
+  }
+
+  #map_Lyon.reduct_mode
+  {
+    height: 100vh;
+  }
+
+  .leaflet-control-zoom
+  {
+    display: none;
+  }
+
+  .leaflet-control-attribution
+  {
+    display: none;
+  }
+
+    /* Info station block */
+  
+  #div_info_panel
+  {
+    margin: 0;
+  }
+
+  #info_panel
+  {
+    background-color: #57d68a;
+    position: absolute;
+    display: inline;
+    z-index: 1000;
+    max-width: 350px;
+    border-radius: 20px 20px 0px 0px;
+    margin: 0 auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  #pointer_arrow
+  {
+    display: none;
+  }
+  
+  #erase_info_panel
+  {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  #info_stations
+  {
+    padding: 5px;
+  }
+
+  .info_line
+  {
+    padding: 0;
+    border: none;
+    font-size: 1em;
+  }
+
+  #booking
+  {
+    margin: 0 auto;
+    padding: 5px;
+  }
+
+     /* reservation form block */
+
+  #form_booking
+  {
+    margin: 0;
+    padding: 5px;
+    border: 0;
+    position: absolute;
+    z-index: 1000;
+    margin: 0 auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 300px;
+  }
+  
+  .form_div
+  {
+    display: flex;
+  }
+
+  .label
+  {
+    padding: 7px 0px;
+    width: 70px;
+    font-size: 0.9em;
+  }
+
+  .field
+  {
+    width: auto;
+    height: 15px;
+  }
+
+  #erase_canvas
+  {
+    height: 20px;
+    width: 45px;
+    font-size: 0.7em;
+  }
+
+  #ask_confirm
+  {
+    bottom: 25%;
+  }
+  
+  .long_ask
+  {
+    display: none;
+  }
+  
+  .short_ask
+  {
+    display: block;
+    font-style: italic;
+    font-size: 1em;
+    text-align: center;
+  }
+
+    /* temporary info frames */
+
+  #reservation_confirmed
+  {
+    position: absolute;
+    top: 0;
+    margin: auto;
+  }
+
+  #reservation_canceled
+  {
+    position: absolute;
+    margin: auto;
+  }
+
+  .info_reservation_status
+  {
+    max-width: 280px;
+    z-index: 1000;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  /* CSS TIMER */
+
+  #timer
+  {
+    position: absolute;
+    z-index: 900;
+    margin: 0 auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
+    padding: 0px 5px;
+    font-weight: normal;
+  }
+
+  .long_cancel
+  {
+    display: none;
+  }
+
+  .short_cancel
+  {
+    display: flex;
+  }
+
+  #cancel_reservation_button
+  {
+    width: auto;
+    margin-right: 5px;
+    padding: 3px;
+    font-weight: bold;
+  } 
+}
+
+
+
+
+
+@media all and (max-width: 768px) {
+  
+    /*slider button */
+  
+  .slider_button
+  {
+   font-size: 1.5em;
+  }
+  
+  #pause
+  {
+    width: 40px;
+    height: 40px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  
+    /* Slider style diapo 4 and 7 */
+
+  .icon_text {
+    display: none;
+  }
+  
+  .small_icon_text{
+    display: block;
+  }
+
+  .icones_sample p
+  {
+    font-style: italic;
+  }
+  
+  .icones_sample p
+  {
+    font-size: 1.2em;
+  }
+
+}  
+
+    
+
+  
+  
+@media all and (max-width: 576px) {
+  
+    /* menu logo, text and welcome text */
+
+  #menu_container a
+  {
+    font-size: initial; 
+  }
+
+  #deco_velo img
+  {
+    width: 70px;
+    height: 70px;
+  }
+
+  .image_sample
+  {
+    height: 40%;
+  }
+  
+  .accueil_presentation
+  { 
+    display: none;
+  }
+  
+  .cadre > p
+  {
+    font-size: 3vh; 
+  }
+  
+
+  #long_image_sample
+  {
+    width: 95%;
+    height: auto;
+  }
+
+}
+  
+  
